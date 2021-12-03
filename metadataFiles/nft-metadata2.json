@@ -1,0 +1,19 @@
+{
+    "description": "alphabet",
+    "image": "https://bafkreibhp43mnkuwx6nmozywpmga2meiamahh3n4wngzfkqjj5kvbe7vpq.ipfs.dweb.link/",
+    "name": "letter #2",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Grey"
+        },
+        {
+            "trait_type": "Letter color",
+            "value": "Blue"
+        },
+        {
+            "trait_type": "3D",
+            "value": "Yes"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "description": "alphabet",
+    "image": "https://bafkreigvdw5lp4o4f7z4glmwhzuowjjz4sbnny6vbnmy5dcwwbsj3nx7qe.ipfs.dweb.link/",
+    "name": "letter #4",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Grey"
+        },
+        {
+            "trait_type": "Letter color",
+            "value": "Blue"
+        },
+        {
+            "trait_type": "3D",
+            "value": "Yes"
+        }
+    ]
+}

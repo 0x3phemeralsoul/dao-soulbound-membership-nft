@@ -1,0 +1,19 @@
+{
+    "description": "alphabet",
+    "image": "https://bafkreiepmitq2w3i7jflhfut6oaptcsnlxpkmgjs5igb2ioicrlvsmhxyy.ipfs.dweb.link/",
+    "name": "letter #8",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Grey"
+        },
+        {
+            "trait_type": "Letter color",
+            "value": "Blue"
+        },
+        {
+            "trait_type": "3D",
+            "value": "Yes"
+        }
+    ]
+}

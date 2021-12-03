@@ -1,0 +1,19 @@
+{
+    "description": "alphabet",
+    "image": "https://bafkreihjqljgxotd4vtme3fhbkwcfrmjw5snb57mqhj2ea7invkswu5vny.ipfs.dweb.link/",
+    "name": "letter #3",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Grey"
+        },
+        {
+            "trait_type": "Letter color",
+            "value": "Blue"
+        },
+        {
+            "trait_type": "3D",
+            "value": "Yes"
+        }
+    ]
+}

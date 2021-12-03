@@ -1,3 +1,4 @@
 .env
+.dap-debug
 node_modules
 cache

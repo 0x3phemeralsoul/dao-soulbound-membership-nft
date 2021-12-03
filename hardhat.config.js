@@ -15,15 +15,18 @@ module.exports = {
         timeout: 90000
     },
     networks: {
+        hardhat: {
+            
+        },
         palm_testnet: {
             url: `https://palm-testnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
             accounts: [`0x` + process.env.PRIVATE_KEY],
-            gasPrice: 1000
+            gasPrice: "auto"
         },
         palm_mainnet: {
-            url: `https://palm-mainnet.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
+            url: process.env.RPC,
             accounts: [`0x` + process.env.PRIVATE_KEY],
-            gasPrice: 1000
+            gasPrice: "auto"
         }
     }
 };

@@ -1,0 +1,19 @@
+{
+    "description": "TEST 1 PCC DAO Committee membership",
+    "image": "https://gateway.pinata.cloud/ipfs/QmPZRgfBLTwuDNoLmzhT7Fua5qrRo86iUday1uHEnDmEBF",
+    "name": "TEST1PCC DAO Committee Membership",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Grey"
+        },
+        {
+            "trait_type": "Letter color",
+            "value": "Blue"
+        },
+        {
+            "trait_type": "3D",
+            "value": "Yes"
+        }
+    ]
+}

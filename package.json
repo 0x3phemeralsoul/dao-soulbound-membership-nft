@@ -9,13 +9,21 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@ethersproject/experimental": "^5.5.0",
     "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "chai-as-promised": "^7.1.1",
     "ethers": "^5.5.1",
-    "hardhat": "^2.6.8"
+    "ganache-cli": "^6.12.2",
+    "hardhat": "^2.7.1"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.3.3",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.7",
+    "@openzeppelin/contracts": "^4.8.0",
+    "chai": "^4.3.4",
+    "cross-fetch": "^3.1.4",
     "dotenv": "^10.0.0",
-    "ora": "^6.0.1"
+    "ethereum-waffle": "^3.4.4",
+    "ganache-time-traveler": "^1.0.15",
+    "graphql": "^14.7.0"
   }
 }

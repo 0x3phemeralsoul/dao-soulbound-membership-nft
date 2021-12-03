@@ -1,0 +1,19 @@
+{
+    "description": "alphabet",
+    "image": "https://bafkreiburwi6lmwepgyyxlbmwumkhvhenmtcr53okcdnwzc7ixi35mhomy.ipfs.dweb.link/",
+    "name": "letter #11",
+    "attributes": [
+        {
+            "trait_type": "Background",
+            "value": "Grey"
+        },
+        {
+            "trait_type": "Letter color",
+            "value": "Blue"
+        },
+        {
+            "trait_type": "3D",
+            "value": "Yes"
+        }
+    ]
+}
