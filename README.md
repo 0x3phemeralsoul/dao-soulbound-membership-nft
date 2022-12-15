@@ -35,6 +35,6 @@ Add an `.env` file matching the variables found in `hardhat.config.js`:
 #### NFT features
  - soulbound: cannot be transfered
  - Access control: Default Admin, Burner, Uri, Minter are passed to constructor
- - Only owner or burner can burn the token. This is to allow right of forget to the owner and also allow for a DAO to kick out a soulbound member.
+ - Only owner or burner can burn the token. This is to allow right to be forgotten to the owner and also allow for a DAO to kick out a soulbound member.
  - Only 1 token per address is allowed.
  - Uri role is able to update the tokenURI metadata.
