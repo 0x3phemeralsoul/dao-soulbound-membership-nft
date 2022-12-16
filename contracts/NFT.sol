@@ -6,7 +6,8 @@ pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
-import "@openzeppelin/contracts/access/AccessControlEnumerable.sol";
+import "@openzeppelin/contracts/access/AccessControl.sol";
+import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Votes.sol";
 
 /**
  * @author  0x3pehemeralsoul
@@ -17,7 +18,8 @@ import "@openzeppelin/contracts/access/AccessControlEnumerable.sol";
 contract NFT is 
     ERC721Enumerable,
     ERC721Burnable, 
-    AccessControlEnumerable
+    AccessControl,
+    ERC721Votes
 {
 
     using Counters for Counters.Counter;
@@ -29,9 +31,9 @@ contract NFT is
     bytes32 public constant MINTER_ROLE = keccak256("MINTER_ROLE");
     bytes32 public constant BURNER_ROLE = keccak256("BURNER_ROLE");
     bytes32 public constant URI_ROLE = keccak256("URI_ROLE");
-    bytes32 public constant ADMIN_ROLE = keccak256("ADMIN_ROLE");    
+    bytes32 public constant ADMIN_ROLE = keccak256("DEFAULT_ADMIN_ROLE");    
 
-    constructor(address minter, address burner, address uri, address admin, string memory _baseTokenURI) ERC721("TEST1PCC DAO Membership", "T1PCC") {
+    constructor(address minter, address burner, address uri, address admin, string memory _baseTokenURI) ERC721("TEST1PCC DAO Membership", "T1PCC") EIP712("PCC DAO", "1.0") {
         _setupRole(MINTER_ROLE, minter);
         _setupRole(BURNER_ROLE, burner);
         _setupRole(URI_ROLE, uri);
@@ -76,6 +78,22 @@ contract NFT is
     }
 
     /**
+     * @dev See {ERC721-_afterTokenTransfer}. Adjusts votes when tokens are transferred.
+     *
+     * Emits a {IVotes-DelegateVotesChanged} event.
+     */
+    function _afterTokenTransfer(
+        address from,
+        address to,
+        uint256 firstTokenId,
+        uint256 batchSize
+    ) internal virtual override(ERC721, ERC721Votes) {
+        _transferVotingUnits(from, to, batchSize);
+        super._afterTokenTransfer(from, to, firstTokenId, batchSize);
+    }
+
+
+    /**
      * @notice  Owner can burn token in order to enforce the right to be forgotten. Also BURNER_ROLE can burn in order to kick out a member from a DAO.
      * @dev     Override to include BURNER_ROLE, the _beforeTokenTransfer function is overriden to comply also with BURNER_ROLE. These 2 functions go hand in hand.
      * @param   tokenId  tokenID to be burned
@@ -108,7 +126,7 @@ contract NFT is
         public
         view
         virtual
-        override(AccessControlEnumerable, ERC721, ERC721Enumerable)
+        override(AccessControl, ERC721, ERC721Enumerable)
         returns (bool)
     {
         return super.supportsInterface(interfaceId);

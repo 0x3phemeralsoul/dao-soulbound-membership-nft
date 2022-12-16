@@ -8,7 +8,7 @@ module.exports = {
     settings: {
         optimizer: {
             enabled: true,
-            runs: 1000000,
+            runs: 1,
         },
     },
     mocha: {
