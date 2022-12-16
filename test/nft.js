@@ -1,7 +1,6 @@
 const chai = require('chai')
 const { loadFixture } = require("@nomicfoundation/hardhat-network-helpers");
 const { solidity } =  require('ethereum-waffle');
-const { execute } = require('graphql');
 const { expect } = chai
 chai.use(solidity);
 

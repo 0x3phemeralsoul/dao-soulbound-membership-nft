@@ -1,12 +1,12 @@
 {
-  "name": "training-mint-nft-hardhat",
+  "name": "dao-soulbound",
   "version": "1.0.0",
   "description": "",
   "main": "hardhat.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "0x3pehemeralsoul",
   "license": "MIT",
   "devDependencies": {
     "@ethersproject/experimental": "^5.5.0",
