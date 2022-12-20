@@ -4,11 +4,13 @@
 require('dotenv').config();
 require("@nomiclabs/hardhat-ethers");
 module.exports = {
-    solidity: "0.8.6",
-    settings: {
-        optimizer: {
+    solidity: {
+        version: "0.8.17",
+        settings: {
+          optimizer: {
             enabled: true,
-            runs: 1,
+            runs: 1000,
+          },
         },
     },
     mocha: {
